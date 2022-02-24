@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
 
     students.push({ ...student, id : uuidv4() });
 
-    res.send('Student list: '+ student.firstName + ' added to database!');
+    res.send('Student '+ student.firstName + ' added to database!');
 });
 
 router.get('/:id', (req, res) => {
@@ -29,7 +29,7 @@ router.delete('/:id', (req, res) => {
 
     students = students.filter((student) => student.id != id);
 
-    res.send('User ' + id + ' has been deleted!');
+    res.send('Student ' + id + ' has been deleted!');
 });
 
 router.patch('/:id', (req,res) => {
@@ -41,7 +41,7 @@ router.patch('/:id', (req,res) => {
     if(lastName) studentUpdate.lastName = lastName;
     if(age) studentUpdate.age = age;
 
-    res.send('User ' + id + ' has been updated!')
+    res.send('Student ' + id + ' has been updated!')
 
 });
 
