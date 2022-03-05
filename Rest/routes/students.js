@@ -1,5 +1,6 @@
 import express from 'express';
 import { v4 as uuidv4 } from 'uuid';
+import Posts from "../models/Posts.js";
 
 const router = express.Router();
 
